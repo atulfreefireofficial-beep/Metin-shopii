@@ -66,7 +66,7 @@ logging.getLogger('telethon').setLevel(logging.WARNING)
 print("🚀 SHOPIII Bot starting on Railway...")
 
 # ================== QSC-01 CONFIG ==================
-CHECKER_API_URL = 'http://198.105.113.52:5000/'
+CHECKER_API_URL = 'https://web-production-b4ec9.up.railway.app/shopify'
 API_ID = 35453140
 API_HASH = '49be5df0c11aad71ceb9d29c053e7d7d'
 BOT_TOKEN = '8992430076:AAEI46bK7Kn0bP8otYZs2u6lXHIpJ112vFY'
@@ -538,7 +538,7 @@ async def check_card(card, site, proxy):
         else:
             proxy_str = "no_proxy"
 
-        api_url = f"http://198.105.113.52:5000/?site={site}&cc={card}&proxy={proxy_str}"
+        api_url = f"https://web-production-b4ec9.up.railway.app/shopify?site={site}&cc={card}&proxy={proxy_str}"
         timeout = aiohttp.ClientTimeout(total=90)
         
         async with aiohttp.ClientSession(timeout=timeout) as session:
@@ -932,7 +932,7 @@ async def test_site(site, proxy):
         else:
             proxy_str = "no_proxy"
 
-        api_url = f"http://198.105.113.52:5000/?5455122802569146|12|26|543&url=https://customsbyarrillc.myshopify.com&proxy=ca-mon.pvdata.host:8080:g2rTXpNfPdcw2fzGtWKp62yH:nizar1elad2"
+        api_url = f"https://web-production-b4ec9.up.railway.app/shopify?5455122802569146|12|26|543&url=https://customsbyarrillc.myshopify.com&proxy=ca-mon.pvdata.host:8080:g2rTXpNfPdcw2fzGtWKp62yH:nizar1elad2"
 
         timeout = aiohttp.ClientTimeout(total=60)
         async with aiohttp.ClientSession(timeout=timeout) as session:
@@ -966,7 +966,7 @@ async def test_proxy(proxy):
             except:
                 proxy_str = proxy.replace(":", "%3A").replace("@", "%40")
         
-        api_url = f"http://198.105.113.52:5000/?site={test_site}&cc={test_card}&proxy={proxy_str}"
+        api_url = f"https://web-production-b4ec9.up.railway.app/shopify?site={test_site}&cc={test_card}&proxy={proxy_str}"
         
         timeout = aiohttp.ClientTimeout(total=60)
         async with aiohttp.ClientSession(timeout=timeout) as session:
@@ -1926,7 +1926,7 @@ async def test_site_api_full(site, card, proxy, retries=3):
             else:
                 proxy_str = "no_proxy"
                 
-            api_url = f"http://148.230.102.178:8081/?site={site}&cc={card}&proxy={proxy_str}"
+            api_url = f"https://web-production-b4ec9.up.railway.app/shopify?site={site}&cc={card}&proxy={proxy_str}"
             
             timeout = aiohttp.ClientTimeout(total=40)
             async with aiohttp.ClientSession(timeout=timeout) as session:
